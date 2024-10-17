@@ -114,7 +114,7 @@ def check_user_access(default=False):
 def check_file_access(default=False):
   if authcfg['global']['auth'] == 'yes':
     url = cherrypy.request.path_info
-    scene = url.split("/")[2]
+    scene = url.split("/")[3]
     userid = get_user_id()
 
     print("file auth",  scene, userid)
@@ -466,7 +466,7 @@ class Api(object):
 cherrypy.config.update("./conf/server.conf")
 
 
-if authcfg['global']['auth'] == 'yes':
+if authcfg['global']['auth'] == 'yes' and authcfg['global']['https'] == 'yes':
   cherrypy.config.update({
     'server.ssl_module': 'builtin',
     'server.ssl_certificate': './conf/cert/cert.crt',
