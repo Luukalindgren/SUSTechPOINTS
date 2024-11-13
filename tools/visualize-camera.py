@@ -55,7 +55,7 @@ intrinsic_matrix  = np.reshape(intrinsic, [3,3])
 #     Bicycle:        {color: '#88ff00',  size:[1.6, 0.6, 1.2]},
 #     BicycleGroup:   {color: '#88ff00',  size:[1.6, 0.6, 1.2]},
 #     Motor:          {color: '#aaaa00',  size:[1.6, 0.6, 1.2]},
-#     Truck:          {color: '#00ffff',  size:[10., 2.8, 3]},
+#     Shelf:          {color: '#00ffff',  size:[10., 2.8, 3]},
 #     Tram:           {color: '#00ffff',  size:[10., 2.8, 3]},
 #     Animal:         {color: '#00aaff',  size:[1.6, 0.6, 1.2]},
 #     Misc:           {color: '#008888',  size:[4.5, 1.8, 1.5]},
@@ -66,20 +66,13 @@ intrinsic_matrix  = np.reshape(intrinsic, [3,3])
 
 
 obj_color_map = {
-    "Car":            (0  ,255,0  ),#'#00ff00',
-    "Van":            (0  ,255,0  ),#'#00ff00',
-    "Bus":            (0  ,255,255),#'#ffff00', 
-    "Pedestrian":     (0  ,0  ,255),#'#ff0000',
-    "Rider":          (0  ,136,255),#'#ff8800',
-    "Cyclist":        (0  ,136,255),#'#ff8800',
-    "Bicycle":        (0  ,255,136),#'#88ff00',
-    "BicycleGroup":   (0  ,255,136),#'#88ff00',
-    "Motor":          (0  ,176,176),#'#aaaa00',
-    "Truck":          (255,255,0  ),#'#00ffff',
-    "Tram":           (255,255,0  ),#'#00ffff',
-    "Animal":         (255,176,0  ),#'#00aaff',
+    "Table":            (0  ,255,0  ),#'#00ff00',
+    "Chair":            (0  ,255,0  ),#'#00ff00',
+    "Couch":            (0  ,255,255),#'#ffff00', 
+    "Person":     (0  ,0  ,255),#'#ff0000',
+    "Shelf":          (255,255,0  ),#'#00ffff',
+    "Robot":         (255,176,0  ),#'#00aaff',
     "Misc":           (136,136,0  ),#'#008888',
-    "Unknown":        (136,136,0  ),#'#008888',
 }
 
 

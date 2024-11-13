@@ -11,10 +11,7 @@ class LabelChecker:
         self.load_labels()
 
         self.def_labels = [
-        "Car","Pedestrian","Van","Bus","Truck","ScooterRider","Scooter","BicycleRider","Bicycle","Motorcycle","MotorcyleRider","PoliceCar","TourCar","RoadWorker","Child",
-        "BabyCart","Cart","Cone","FireHydrant","SaftyTriangle","PlatformCart","ConstructionCart","RoadBarrel","TrafficBarrier","LongVehicle","BicycleGroup","ConcreteTruck",
-        "Tram","Excavator","Animal","TrashCan","ForkLift","Trimotorcycle","FreightTricycle,","Crane","RoadRoller","Bulldozer","DontCare","Misc","Unknown","Unknown1","Unknown2",
-        "Unknown3","Unknown4","Unknown5",
+        "Table","Person","Chair","Couch","Shelf","Robot","TrashCan","Misc",
         ]
 
         self.messages = []
@@ -104,7 +101,7 @@ class LabelChecker:
 
         #print("object", obj_id, len(label_list), "instances")
 
-        if label_list[0][1]['obj_type'] == 'Pedestrian':
+        if label_list[0][1]['obj_type'] == 'Person':
             return
             
         mean = {}
