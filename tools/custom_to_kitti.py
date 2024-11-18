@@ -29,15 +29,15 @@ for s in scenes:
 
         with open(os.path.join(output_path, os.path.splitext(l)[0]+".txt"), 'w') as fout:
             for obj in label:
-                line = "{} 0 0 0 0 0 0 0 {} {} {} {} {} {} {}\n".format(
+                line = "{} 0.00 0 0.00 0.00 0.00 0.00 0.00 {1:.2f} {2:.2f} {3:.2f} {4:.2f} {5:.2f} {6:.2f} {7:.2f}\n".format(
                     obj['obj_type'],
-                    obj['psr']['scale']['z'], #h
-                    obj['psr']['scale']['y'], #w
-                    obj['psr']['scale']['x'], #l
-                    -obj['psr']['position']['y'], #x
-                    -obj['psr']['position']['z'] + 0.5*obj['psr']['scale']['z'], #y
-                    obj['psr']['position']['x'],  #z
-                    -obj['psr']['rotation']['z'] - math.pi/2,  #rotation_y
+                    float(obj['psr']['scale']['z']), #h
+                    float(obj['psr']['scale']['y']), #w
+                    float(obj['psr']['scale']['x']), #l
+                    -float(obj['psr']['position']['y']), #x
+                    -float(obj['psr']['position']['z']) + 0.5*float(obj['psr']['scale']['z']), #y
+                    float(obj['psr']['position']['x']), #z
+                    -float(obj['psr']['rotation']['z']) - math.pi/2  #rotation_y
                 )
 
                 fout.write(line)
