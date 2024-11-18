@@ -29,7 +29,7 @@ for s in scenes:
 
         with open(os.path.join(output_path, os.path.splitext(l)[0]+".txt"), 'w') as fout:
             for obj in label:
-                line = "{} 0.00 0 0.00 0.00 0.00 0.00 0.00 {1:.2f} {2:.2f} {3:.2f} {4:.2f} {5:.2f} {6:.2f} {7:.2f}\n".format(
+                line = "{} 0.00 0 0.00 0.00 0.00 0.00 0.00 {:.2f} {:.2f} {:.2f} {:.2f} {:.2f} {:.2f} {:.2f}\n".format(
                     obj['obj_type'],
                     float(obj['psr']['scale']['z']), #h
                     float(obj['psr']['scale']['y']), #w
